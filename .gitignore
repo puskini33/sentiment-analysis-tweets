@@ -6,11 +6,8 @@
 venv/
 
 # credentials
-access_key/access.json
+access_key/
 
 # data files
-data/raw/
-data/processed/
+data/
 
-#data labeling files
-data_labeling/
