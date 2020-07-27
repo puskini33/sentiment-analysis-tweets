@@ -4,20 +4,22 @@ import typing
 import pathlib
 
 raw_file_headers = ["created_at", "hashtags", "full_text", "user_screen_name", "user_name", "location",
-                     "description", "urls"]
+                    "description", "urls"]
 
 
-def get_raw_path_file() -> typing.Union[str, pathlib.Path]:
+def get_raw_path_file(user_file_name: str) -> typing.Union[str, pathlib.Path]:
     """Return the raw file path."""
     base_path = Path(__file__).parent
-    raw_tweets_csv_path = (base_path / "../../../data/raw/raw_tweets.csv").resolve()
+    file_name = 'raw_tweets_' + user_file_name + '.csv'
+    raw_tweets_csv_path = (base_path / f"../../../data/raw/{file_name}").resolve()
     return raw_tweets_csv_path
 
 
-def get_processed_path_file() -> typing.Union[str, pathlib.Path]:
+def get_processed_path_file(user_file_name: str) -> typing.Union[str, pathlib.Path]:
     """Return the processed file path."""
     base_path = Path(__file__).parent
-    processed_tweets_csv_path = (base_path / "../../../data/processed/processed_tweets.csv").resolve()
+    file_name = 'processed_tweets_' + user_file_name + '.csv'
+    processed_tweets_csv_path = (base_path / f"../../../data/processed/{file_name}").resolve()
     return processed_tweets_csv_path
 
 

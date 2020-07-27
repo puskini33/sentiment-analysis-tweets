@@ -5,6 +5,7 @@
 * [Installation Guide](#installation-guide)
     * [Install dependencies](#install-dependencies)
 * [Introduction](#introduction)
+* [File Preparation](#data-preparation)
 * [Data Retrieval](#data-retrieval)
 * [Data Preprocessing](#data-preprocessing)
 * [Data Labeling](#data-labeling)
@@ -37,6 +38,8 @@ To set up your local environment before starting to work on the project, follow 
 ## Introduction
 This project is part of the [Frauenloop](https://www.frauenloop.org/) Course Curriculum in Data Science. The course was taught over the course of 3 months and presumed the organization of a project in natural language processing (NLP).
 I choose to focus on the sentiment analysis of tweets that were retrieved with the Twitter API [Twython](https://twython.readthedocs.io/en/latest/).
+## File Preparation
+The scripts for file preparation can be found in `src.data.file_preparation`. The file contains functions to create a new raw_ and/or processed_file with headers, to write to .csv file, and to get relative file path.
 ## Data Retrieval
 The scripts for data retrieval can be found in `src.data.data_retrieval`. You can stream data specifying the keyword of the search, the id of the tweeter page, the number of minutes you want to stream, and the number of tweets you want.
 The data is saved in `data.raw`.
