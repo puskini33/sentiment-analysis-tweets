@@ -2,6 +2,9 @@
 **.idea/
 **/__pycache__/
 
+# venv
+venv/
+
 # credentials
 access_key/access.json
 
