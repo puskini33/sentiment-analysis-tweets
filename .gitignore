@@ -6,7 +6,7 @@
 venv/
 
 # credentials
-access_key/
+access_key/access.json
 
 # data files
 data/
