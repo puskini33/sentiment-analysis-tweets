@@ -1,7 +1,7 @@
 from twython import TwythonStreamer
 from access_key.handle_access_json import Credentials
 from src.data.data_preprocessing.utils.raw_tweet_processing import process_tweet
-from src.data.data_preparation.prepare_data_file import write_to_csv
+from src.data.file_preparation.prepare_data_file import write_to_csv
 import datetime
 
 
@@ -16,10 +16,11 @@ class MyStreamer(TwythonStreamer):
         self.number_saved_tweets: int = 0
         self.streaming_time: int or None = None
 
-    def stream_data(self, keyword: str) -> None:
+    def stream_data(self, keyword: str, user_id) -> None:
         """Update the streaming time and start streaming with the given keyword."""
         self.update_streaming_time()
-        self.statuses.filter(track=keyword, language='en', tweet_mode='extended')
+        self.statuses.filter(track=keyword, follow=[user_id],
+                             language='en', tweet_mode='extended')  # user_id: amazon, tesla, google
 
     # received data
     def on_success(self, data: dict) -> None:
