@@ -4,6 +4,7 @@
 ## Quick Links
 * [Introduction](#introduction)
 * [Installation Guide](#installation-guide)
+* [Dataset](#Datasets)
 * [File Preparation](#data-preparation)
 * [Data Retrieval](#data-retrieval)
 * [Data Preprocessing](#data-preprocessing)
@@ -23,9 +24,9 @@ Some of the concepts that were taught include: <br>
     + creating a pipeline with sklearn for modeling <br>
     + evaluating model performance<br>
     
-I choose to focus on the sentiment analysis of tweets that were retrieved with the Twitter API [Twython](https://twython.readthedocs.io/en/latest/). The goal of my project is to predict the sentiment of tweets that are about Trump.
+I choose to focus on the sentiment analysis of tweets that were retrieved with the Twitter API [Twython](https://twython.readthedocs.io/en/latest/). The **goal** of my project is to predict the sentiment of tweets that are about Trump.
 I made a list of 8 companies that openly support or are against Trump, and I retrieved from the company's Twitter page 10.000 tweets. I assumed that the companies that openly support Trump would tweet more positive tweets about him, 
-and the companies that are against Trump would tweet more negative tweets about Trump. 
+and the companies that are against Trump would tweet more negative tweets. 
 
 ## Installation Guide
 
@@ -49,7 +50,10 @@ To set up your local environment before starting to work on the project, follow 
  
    6. Install the spacy model: `python -m spacy download en_core_web_sm`
    
-   
+   7. To request the data files, write me at: [elenahirjoaba@gmail.com](elenahirjoaba@gmail.com)
+
+## Dataset
+The dataset is composed of 90.000 tweets retrieved from different companies'tweeter pages that openly support or are against Trump. The list of companies is: Uline, Home_Depot, CNN, Taco_Bell, Bang_Energy, Patagonia, Microsoft, Merriam_Webster, Fox_News.
 
 ## File Preparation
 
