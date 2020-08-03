@@ -11,6 +11,7 @@
 * [Data Labeling](#data-labeling)
 * [Feature Extraction](#feature-extraction)
 * [Modeling](#modeling)
+* [Limitations](#limitations)
 
 
 ## Introduction
@@ -57,7 +58,7 @@ The dataset is composed of 90.000 tweets retrieved from different companies'twee
 
 ## File Preparation
 
-The scripts for file preparation can be found in `src.data.file_preparation`. The file contains functions to create a new raw_ and/or processed_file with headers, to write to .csv file, and to get relative file path.
+The scripts for file preparation can be found in `src.data.file_preparation`. The file contains functions to create a new **raw_** and **processed_file** with headers, to write to .csv file, and to get relative file path.
 
 ## Data Retrieval
 
@@ -66,7 +67,7 @@ The data is saved in `data.raw`.
 
 ## Data Preprocessing
 
-The script for data preprocessing can be found in `src.data.data_preprocessing`. The processed .csv files can be found in `data.processed`. Stop words, urls, handles, punctuation are removed, the emoji is transformed to a string according to the category it belongs to: EPOS or ENEG. The valence of the emoji is subjectively set by me. I separated positive and negative emojis in 2 lists.
+The script for data preprocessing can be found in `src.data.data_preprocessing`. The processed .csv files can be found in `data.processed`. Stop words, urls, handles, punctuation are removed, and the emoji is transformed to a string according to the category it belongs to: EPOS or ENEG. The valence of the emoji is subjectively set by me. I separated positive and negative emojis in 2 lists.
 ![Data_Preprocessed](/images/processed_data.png)
 ## Data Labeling
 
@@ -74,8 +75,13 @@ The script for data labeling can be found in `src.data.data_labeling`. The .csv 
 ![Data_Labeled](/images/labeled_data.png)
 ## Feature Extraction
 
-The script for data labeling can be found in `src.features.feature_extraction`.
+The script for data labeling can be found in `src.features.feature_extraction`. I applied a tf-idf analysis to retrieve feature.
+
 ## Modeling
+
+## Limitations
+Some limitations of the project and the analysis that was made includes: subjective evaluation of the sentiment of the emoji in the text and the valence of most common words in the corpora that were used for setting the label of the tweet.
+
 
 
 
